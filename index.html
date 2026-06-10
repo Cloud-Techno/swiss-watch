@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Zürich Time & Gifts — Premium Swiss watch outlet and souvenir boutique in Zürich. Authentic Swiss watches at outlet prices, plus exclusive souvenirs, luggage, and gifts." />
+  <meta name="keywords"
+    content="Swiss watches, Zürich watch shop, outlet watches, Swiss souvenirs, Zürich gifts, Swiss Made watches" />
+  <title>Zürich Time & Gifts — Swiss Watches & Souvenirs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <span class="logo-icon">⌚</span>
+        <span class="logo-text">Zürich Time <em>&</em> Gifts</span>
+      </a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="#watches">Watches</a>
+        <a href="#souvenirs">Souvenirs</a>
+        <a href="#about">About</a>
+        <a href="#store">Our Store</a>
+        <a href="#contact" class="btn btn--nav">Visit Us</a>
+      </nav>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img src="images/hero-banner.png" alt="Swiss watches displayed against the Alps" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="container hero__content">
+      <span class="hero__tag">🇨🇭 Swiss Made · Zürich, Switzerland</span>
+      <h1 class="hero__title">
+        Authentic Swiss Watches<br />
+        <span class="highlight">At Outlet Prices</span>
+      </h1>
+      <p class="hero__sub">
+        Discover Swiss-made watches at the best prices in central Zürich.
+      </p>
+      <div class="hero__cta">
+        <a href="#watches" class="btn btn--primary">Shop Watches</a>
+        <a href="#contact" class="btn btn--outline">Find Our Store</a>
+      </div>
+      <div class="hero__badges">
+        <div class="badge"><span class="badge__icon">✓</span>100% Swiss Authentic</div>
+        <div class="badge"><span class="badge__icon">✓</span>Outlet Prices</div>
+        <div class="badge"><span class="badge__icon">✓</span>Certificate Included</div>
+        <div class="badge"><span class="badge__icon">✓</span>Central Zürich</div>
+      </div>
+    </div>
+    <div class="hero__scroll" id="scrollDown">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============ BANNER STRIP ============ -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>🇨🇭 Authentic Swiss-Made · </span>
+      <span>⌚ Over 300 Models In Stock · </span>
+      <span>🎁 Gift Wrapping Available · </span>
+      <span>✈️ Tax Refund for Non-EU Visitors · </span>
+      <span>💳 All Major Cards Accepted · </span>
+      <span>🚂 2 Min from Zürich HB · </span>
+      <span>🇨🇭 Authentic Swiss-Made · </span>
+      <span>⌚ Over 300 Models In Stock · </span>
+      <span>🎁 Gift Wrapping Available · </span>
+      <span>✈️ Tax Refund for Non-EU Visitors · </span>
+      <span>💳 All Major Cards Accepted · </span>
+      <span>🚂 2 Min from Zürich HB · </span>
+    </div>
+  </div>
+
+  <!-- ============ WATCHES SECTION ============ -->
+  <section class="section watches-section" id="watches">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Our Flagship Category</span>
+        <h2 class="section__title">Swiss Watch Outlet</h2>
+        <p class="section__sub">All timepieces are 100% authentic, Swiss-made, and come with official certificates.
+          These are genuine outlet prices — no compromise on quality.</p>
+      </div>
+
+      <div class="outlet-banner">
+        <div class="outlet-banner__icon">🏷️</div>
+        <div class="outlet-banner__text">
+          <strong>Outlet Prices — Up to 60% Off</strong>
+          <span>Limited stock · Swiss Made · Certificates included · While stocks last</span>
+        </div>
+        <div class="outlet-banner__tag">OUTLET</div>
+      </div>
+
+      <div class="product-grid" id="watch-grid">
+
+        <!-- Watch 1 -->
+        <div class="product-card product-card--watch" data-category="dress">
+          <div class="product-card__badge badge--sale">OUTLET −40%</div>
+          <div class="product-card__image-wrap">
+            <img src="images/watch-1.png" alt="Swiss Classic Dress Watch" loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch1')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Swiss Heritage</span>
+            <h3 class="product-card__name">Classic Automatik Date</h3>
+            <p class="product-card__desc">Silver case · White dial · Brown leather · Swiss ETA movement</p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 1,240</span>
+              <span class="price--sale">CHF 745</span>
+            </div>
+            <div class="product-card__rating">★★★★★ <span>(48 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Watch 2 -->
+        <div class="product-card product-card--watch featured-watch" data-category="sport">
+          <div class="product-card__badge badge--hot">BEST SELLER</div>
+          <div class="product-card__image-wrap">
+            <img src="images/watch-2.png" alt="Swiss Sport Chronograph" loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch2')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Helvetia Sport</span>
+            <h3 class="product-card__name">Blue Chronograph Pro</h3>
+            <p class="product-card__desc">Steel bracelet · Blue dial · Tachymeter bezel · 200m water resistant</p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 3,850</span>
+              <span class="price--sale">CHF 2,190</span>
+            </div>
+            <div class="product-card__rating">★★★★★ <span>(112 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Watch 3 -->
+        <div class="product-card product-card--watch" data-category="luxury">
+          <div class="product-card__badge badge--sale">OUTLET −35%</div>
+          <div class="product-card__image-wrap">
+            <img src="images/watch-3.png" alt="Swiss Rose Gold Luxury Watch" loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch3')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Prestige Genève</span>
+            <h3 class="product-card__name">Rose Gold Diamond Edition</h3>
+            <p class="product-card__desc">18K rose gold · Diamond indices · Champagne dial · Leather strap</p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 8,200</span>
+              <span class="price--sale">CHF 5,330</span>
+            </div>
+            <div class="product-card__rating">★★★★½ <span>(29 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Watch 4 — Placeholder via unsplash -->
+        <div class="product-card product-card--watch" data-category="sport">
+          <div class="product-card__badge badge--sale">OUTLET −50%</div>
+          <div class="product-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=480&q=80" alt="Swiss Diver Watch"
+              loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch4')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Alpstein Dive</span>
+            <h3 class="product-card__name">Deep Diver 300m</h3>
+            <p class="product-card__desc">Black PVD case · Luminous hands · Unidirectional bezel · Rubber strap</p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 2,100</span>
+              <span class="price--sale">CHF 1,050</span>
+            </div>
+            <div class="product-card__rating">★★★★★ <span>(67 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Watch 5 -->
+        <div class="product-card product-card--watch" data-category="dress">
+          <div class="product-card__badge badge--new">NEW IN</div>
+          <div class="product-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=480&q=80"
+              alt="Minimalist Swiss Watch" loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch5')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Lac Léman</span>
+            <h3 class="product-card__name">Ultra-Slim Moonphase</h3>
+            <p class="product-card__desc">Titanium case · Blue soleil dial · Moonphase complication · Sapphire crystal
+            </p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 4,600</span>
+              <span class="price--sale">CHF 2,870</span>
+            </div>
+            <div class="product-card__rating">★★★★★ <span>(34 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+        <!-- Watch 6 -->
+        <div class="product-card product-card--watch" data-category="luxury">
+          <div class="product-card__badge badge--sale">OUTLET −45%</div>
+          <div class="product-card__image-wrap">
+            <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=480&q=80"
+              alt="Gold Swiss Pocket Watch" loading="lazy" />
+            <div class="product-card__hover-actions">
+              <button class="action-btn" aria-label="Quick view" onclick="openModal('watch6')">Quick View</button>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__brand">Burgdorf &amp; Cie.</span>
+            <h3 class="product-card__name">Grand Complication Gold</h3>
+            <p class="product-card__desc">Yellow gold case · Skeleton dial · Hand-wound movement · Museum piece</p>
+            <div class="product-card__prices">
+              <span class="price--original">CHF 12,500</span>
+              <span class="price--sale">CHF 6,875</span>
+            </div>
+            <div class="product-card__rating">★★★★★ <span>(15 reviews)</span></div>
+            <a href="#contact" class="btn btn--card">Inquire Now</a>
+          </div>
+        </div>
+
+      </div><!-- end product-grid -->
+
+      <div class="watches-cta-row">
+        <p>Looking for a specific model? <strong>We have over 300 watches in store.</strong></p>
+        <a href="#contact" class="btn btn--primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ USP STRIP ============ -->
+  <section class="usp-section">
+    <div class="container usp-grid">
+      <div class="usp-card">
+        <div class="usp-icon">🏔️</div>
+        <h4>Swiss Heritage</h4>
+        <p>Every watch is 100% Swiss-made, sourced directly from authorised channels.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🏷️</div>
+        <h4>True Outlet Pricing</h4>
+        <p>Genuine outlet prices — up to 60% off retail. No hidden fees, no gimmicks.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">📜</div>
+        <h4>Certificate of Authenticity</h4>
+        <p>Every timepiece ships with an official certificate and manufacturer warranty.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">✈️</div>
+        <h4>Tax Refund Ready</h4>
+        <p>Non-EU visitors qualify for VAT refund. We handle all the paperwork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOUVENIRS SECTION ============ -->
+  <section class="section souvenirs-section" id="souvenirs">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Take Switzerland Home</span>
+        <h2 class="section__title">Zürich Souvenirs & Gifts</h2>
+        <p class="section__sub">Complement your Swiss watch with authentic Zürich souvenirs — from premium luggage to
+          hand-crafted magnets, chocolates, and more.</p>
+      </div>
+
+      <div class="souvenir-grid">
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="images/souvenir-magnets.png" alt="Zürich souvenir magnets" loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Zürich Magnets Collection</h3>
+            <p>Hand-painted 3D fridge magnets featuring iconic Swiss landmarks — Matterhorn, Swiss cross, Lake Zürich,
+              and more.</p>
+            <div class="souvenir-price">From CHF 4.90</div>
+          </div>
+        </div>
+
+        <div class="souvenir-card souvenir-card--featured">
+          <div class="souvenir-card__image">
+            <img src="images/luggage.png" alt="Swiss design luggage" loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiss Traveller Luggage</h3>
+            <p>Premium hardshell suitcases and travel bags in bold Swiss red & white. TSA-approved, lightweight, and
+              ultra-durable.</p>
+            <div class="souvenir-price">From CHF 89.00</div>
+          </div>
+        </div>
+
+        <div class="souvenir-card" id="chocolates-card">
+          <div class="souvenir-card__image">
+            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=480&q=80"
+              alt="Swiss chocolate selection" loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Premium Swiss Chocolates</h3>
+            <p>A curated selection of Lindt, Läderach & Callier chocolates in signature gift boxes, perfect for every
+              occasion.</p>
+            <div class="souvenir-price">From CHF 9.90</div>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Swiss pocket knife"
+              loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiss Army Knives</h3>
+            <p>Authentic Victorinox multitools and pocket knives — the original Swiss souvenir, engraved personalisation
+              available.</p>
+            <div class="souvenir-price">From CHF 24.00</div>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=480&q=80"
+              alt="Swiss gifts and postcards" loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Gift Sets & Postcards</h3>
+            <p>Beautifully curated Zürich & Switzerland gift sets with postcards, keychains, pins, and limited edition
+              prints.</p>
+            <div class="souvenir-price">From CHF 14.90</div>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=480&q=80" alt="Swiss music box"
+              loading="lazy" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiss Music Boxes</h3>
+            <p>Traditional hand-wound music boxes playing classic Swiss melodies — a timeless and memorable gift.</p>
+            <div class="souvenir-price">From CHF 39.00</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="section about-section" id="about">
+    <div class="container about-inner">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=720&q=80" alt="Zürich old town street"
+          loading="lazy" />
+        <div class="about-image__badge">
+          <span class="big-num">15+</span>
+          <span>Years in Zürich</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section__tag">Our Story</span>
+        <h2 class="section__title">Born in Zürich,<br />Built on Precision</h2>
+        <p>Since opening our doors in the heart of Zürich, we have dedicated ourselves to making Swiss craftsmanship
+          accessible to everyone. We believe that owning a genuine Swiss watch should not be reserved exclusively for
+          luxury budgets.</p>
+        <p>Our outlet model allows us to bring authentic, certified Swiss timepieces to travellers and locals alike — at
+          prices that genuinely reflect value, not inflated retail markups.</p>
+        <p>Beyond watches, our boutique captures the spirit of Switzerland: vibrant souvenirs, quality luggage, and the
+          warm hospitality this city is known for.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat__num">300+</span>
+            <span class="stat__label">Watch Models</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">60%</span>
+            <span class="stat__label">Max Savings</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">50k+</span>
+            <span class="stat__label">Happy Customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Customer Reviews</span>
+        <h2 class="section__title">What Our Visitors Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Found the perfect Swiss watch at an incredible price. The staff were incredibly knowledgeable and the
+            certificate of authenticity gave me total peace of mind."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div><strong>James M.</strong><span>Tourist from London, UK</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"I spent an afternoon in their shop and left with a chronograph I had been eyeing for years — at nearly
+            half the price I had seen elsewhere. Absolutely recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SB</div>
+            <div><strong>Sofia B.</strong><span>Visitor from Barcelona, Spain</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Amazing selection of Swiss magnets and traditional gifts for my family. Prices are very reasonable and the
+            location is super convenient near the main station."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">KT</div>
+            <div><strong>Kenji T.</strong><span>Visitor from Tokyo, Japan</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORE / MAP SECTION ============ -->
+  <section class="section store-section" id="store">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Visit Us</span>
+        <h2 class="section__title">Find Our Zürich Boutique</h2>
+        <p class="section__sub">Conveniently located near Zürich Hauptbahnhof — just a 2-minute walk from the main
+          station.</p>
+      </div>
+      <div class="store-inner">
+        <div class="store-info">
+          <div class="store-info__block">
+            <div class="store-info__icon">📍</div>
+            <div>
+              <strong>Address</strong>
+              <span>Bahnhofstrasse area, Zürich<br />8001 Zürich, Switzerland</span>
+            </div>
+          </div>
+          <div class="store-info__block">
+            <div class="store-info__icon">🕐</div>
+            <div>
+              <strong>Opening Hours</strong>
+              <span>Mon – Sat: 09:00 – 20:00<br />Sunday: 10:00 – 18:00</span>
+            </div>
+          </div>
+          <div class="store-info__block">
+            <div class="store-info__icon">📞</div>
+            <div>
+              <strong>Contact</strong>
+              <span>+41 44 000 00 00<br />info@zurichtimegifts.ch</span>
+            </div>
+          </div>
+          <div class="store-info__block">
+            <div class="store-info__icon">🚂</div>
+            <div>
+              <strong>How to Reach Us</strong>
+              <span>2 min walk from Zürich HB<br />Trams 3, 7, 11, 14 — HB stop</span>
+            </div>
+          </div>
+        </div>
+        <div class="store-map">
+          <iframe title="Zürich Store Location"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.527%2C47.372%2C8.548%2C47.381&layer=mapnik&marker=47.3769%2C8.5417"
+            width="100%" height="400" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Get In Touch</span>
+        <h2 class="section__title">We'd Love to Hear From You</h2>
+        <p class="section__sub">Looking for a specific watch model? Special gift for someone? We're here to help.</p>
+      </div>
+      <div class="contact-inner">
+        <form class="contact-form" id="contact-form" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic</option>
+              <option value="watch-inquiry">Watch Inquiry</option>
+              <option value="souvenir">Souvenir / Gift</option>
+              <option value="custom-order">Custom Order</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for…"
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message ✈️</button>
+          <div class="form-success" id="form-success" aria-live="polite"></div>
+        </form>
+        <div class="contact-aside">
+          <div class="contact-card">
+            <div class="contact-card__icon">💬</div>
+            <h4>WhatsApp</h4>
+            <p>Message us directly for fast replies on watch availability.</p>
+            <a href="https://wa.me/41440000000" class="btn btn--whatsapp" target="_blank" rel="noopener">Open
+              WhatsApp</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon">🛍️</div>
+            <h4>Walk-in Welcome</h4>
+            <p>No appointment needed. Visit our boutique 7 days a week and explore our full collection in person.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">
+          <span class="logo-icon">⌚</span>
+          <span class="logo-text">Zürich Time <em>&</em> Gifts</span>
+        </a>
+        <p>Your premier destination for authentic Swiss watches at outlet prices and genuine Swiss souvenirs in the
+          heart of Zürich.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" aria-label="Facebook">📘 Facebook</a>
+          <a href="#" aria-label="TripAdvisor">⭐ TripAdvisor</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h5>Quick Links</h5>
+        <a href="#watches">Swiss Watches</a>
+        <a href="#souvenirs">Souvenirs & Gifts</a>
+        <a href="#about">Our Story</a>
+        <a href="#store">Find Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__links">
+        <h5>Categories</h5>
+        <a href="#watches">Dress Watches</a>
+        <a href="#watches">Sport Chronographs</a>
+        <a href="#watches">Luxury Gold</a>
+        <a href="#souvenirs">Travel Luggage</a>
+        <a href="#souvenirs">Swiss Magnets</a>
+      </div>
+      <div class="footer__links">
+        <h5>Visit Us</h5>
+        <a href="#store">Bahnhofstrasse, 8001 Zürich</a>
+        <a href="tel:+41440000000">+41 44 000 00 00</a>
+        <a href="mailto:info@zurichtimegifts.ch">info@zurichtimegifts.ch</a>
+        <span>Mon–Sat 09:00–20:00</span>
+        <span>Sunday 10:00–18:00</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2024 Zürich Time & Gifts. All rights reserved.</span>
+        <span>🇨🇭 Swiss Authenticity Guaranteed</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ QUICK-VIEW MODAL ============ -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="modal__content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
