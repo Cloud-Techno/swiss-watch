@@ -4,14 +4,26 @@
 
 // ---------- NAVBAR SCROLL ----------
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-}, { passive: true });
+function handleScroll() {
+  const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollPos > 10) {
+    if (navbar) {
+      navbar.classList.add('scrolled');
+      navbar.style.setProperty('background', '#132232', 'important');
+    }
+  } else {
+    if (navbar) {
+      navbar.classList.remove('scrolled');
+      navbar.style.setProperty('background', 'transparent', 'important');
+    }
+  }
+}
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll(); // Check on load
 
 // ---------- HAMBURGER MENU ----------
 const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -74,7 +86,7 @@ function createObserver() {
 document.addEventListener('DOMContentLoaded', createObserver);
 
 // Add revealed class style
-(function() {
+(function () {
   const style = document.createElement('style');
   style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
   document.head.appendChild(style);
@@ -83,16 +95,16 @@ document.addEventListener('DOMContentLoaded', createObserver);
 // ---------- CONTACT FORM ----------
 function handleForm(e) {
   e.preventDefault();
-  const form    = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form');
   const success = document.getElementById('form-success');
-  const btn     = form.querySelector('button[type="submit"]');
+  const btn = form.querySelector('button[type="submit"]');
 
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
   // Simulate async submission
   setTimeout(() => {
-    success.textContent = '✅ Thank you! We'll be in touch shortly.';
+    success.textContent = "✅ Thank you! We'll be in touch shortly.";
     form.reset();
     btn.textContent = 'Send Message ✈️';
     btn.disabled = false;
@@ -103,63 +115,51 @@ function handleForm(e) {
 // ---------- QUICK VIEW MODAL ----------
 const watchData = {
   watch1: {
-    img:   'images/watch-1.png',
-    brand: 'Swiss Heritage',
-    name:  'Classic Automatik Date',
-    desc:  'A timeless Swiss dress watch featuring an ETA automatic movement, silver stainless-steel case (38mm), white lacquered dial, and premium brown leather strap. Sapphire crystal, date window, 50m water resistance.',
-    orig:  'CHF 1,240',
-    sale:  'CHF 745',
-    rating:'★★★★★ (48 reviews)'
+    img: 'images/watch-roamer.png',
+    brand: 'Roamer',
+    name: 'Classic Automatik Date',
+    desc: 'A timeless Swiss dress watch featuring an ETA automatic movement, silver stainless-steel case (38mm), white lacquered dial, and premium brown leather strap. Sapphire crystal, date window, 50m water resistance.',
+    rating: '★★★★★ (48 reviews)'
   },
   watch2: {
-    img:   'images/watch-2.png',
-    brand: 'Helvetia Sport',
-    name:  'Blue Chronograph Pro',
-    desc:  'High-performance Swiss sport chronograph with a stunning blue sunburst dial, tachymeter bezel, and solid stainless steel bracelet. Features an ETA Valjoux 7750 movement, 200m water resistance, and luminous hands.',
-    orig:  'CHF 3,850',
-    sale:  'CHF 2,190',
-    rating:'★★★★★ (112 reviews)'
+    img: 'images/watch-victorinox.png',
+    brand: 'Victorinox',
+    name: 'Blue Chronograph Pro',
+    desc: 'High-performance Swiss sport chronograph with a stunning blue sunburst dial, tachymeter bezel, and solid stainless steel bracelet. Features an ETA Valjoux 7750 movement, 200m water resistance, and luminous hands.',
+    rating: '★★★★★ (112 reviews)'
   },
   watch3: {
-    img:   'images/watch-3.png',
-    brand: 'Prestige Genève',
-    name:  'Rose Gold Diamond Edition',
-    desc:  'Exceptional 18K rose gold timepiece with champagne dial and factory-set diamond indices. Hand-finished movement, brown alligator leather strap, and solid case back with serial engraving. A true heirloom piece.',
-    orig:  'CHF 8,200',
-    sale:  'CHF 5,330',
-    rating:'★★★★½ (29 reviews)'
+    img: 'images/watch-jacques.png',
+    brand: 'Jacques du Manoir',
+    name: 'Inspiration Rose Gold',
+    desc: 'Exceptional Swiss timepiece with mother of pearl dial and factory-set diamond indices. Hand-finished movement, gold-tone mesh bracelet, and sapphire crystal. A true piece of elegance.',
+    rating: '★★★★★ (29 reviews)'
   },
   watch4: {
-    img:   'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=480&q=80',
-    brand: 'Alpstein Dive',
-    name:  'Deep Diver 300m',
-    desc:  'Professional dive watch engineered for underwater performance. Black PVD-coated stainless steel case (42mm), ceramic unidirectional bezel, luminescent hands and indices, helium escape valve, and black rubber strap.',
-    orig:  'CHF 2,100',
-    sale:  'CHF 1,050',
-    rating:'★★★★★ (67 reviews)'
+    img: 'images/watch-wenger.png',
+    brand: 'Wenger',
+    name: 'Deep Diver 300m',
+    desc: 'Professional dive watch engineered for underwater performance. Black PVD-coated stainless steel case (42mm), ceramic unidirectional bezel, luminescent hands and indices, helium escape valve, and black rubber strap.',
+    rating: '★★★★★ (67 reviews)'
   },
   watch5: {
-    img:   'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=480&q=80',
-    brand: 'Lac Léman',
-    name:  'Ultra-Slim Moonphase',
-    desc:  'An extraordinarily thin titanium-cased watch with a blue soleil dial. Features a hand-wound movement with moonphase complication, sapphire crystal case back, and a grey NATO strap. Only 289 pieces made.',
-    orig:  'CHF 4,600',
-    sale:  'CHF 2,870',
-    rating:'★★★★★ (34 reviews)'
+    img: 'images/watch-mondaine.png',
+    brand: 'Mondaine',
+    name: 'SBB Classic Design',
+    desc: 'An extraordinarily clean design from the official Swiss Railways (SBB). Features a brushed steel case, black leather strap, and the famous red second hand. A true icon of Swiss design heritage.',
+    rating: '★★★★★ (34 reviews)'
   },
   watch6: {
-    img:   'https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=480&q=80',
-    brand: 'Burgdorf & Cie.',
-    name:  'Grand Complication Gold',
-    desc:  'A museum-quality Swiss pocket-watch converted to wristwatch format. Yellow gold open-worked case showing the mechanical movement in all its glory. Unique hand-wound movement with perpetual calendar. Certificate of antique authenticity included.',
-    orig:  'CHF 12,500',
-    sale:  'CHF 6,875',
-    rating:'★★★★★ (15 reviews)'
+    img: 'images/watch-jowissa.png',
+    brand: 'Jowissa',
+    name: 'Faceted Sapphire Blue',
+    desc: 'A stunning Swiss fashion piece with a faceted sapphire-style crystal. Yellow gold-plated case paired with a vibrant blue leather strap. Unique, bold, and hand-assembled in Switzerland.',
+    rating: '★★★★★ (15 reviews)'
   }
 };
 
 function openModal(id) {
-  const data    = watchData[id];
+  const data = watchData[id];
   if (!data) return;
 
   const content = document.getElementById('modal-content');
@@ -169,10 +169,6 @@ function openModal(id) {
       <span class="product-card__brand">${data.brand}</span>
       <h3 class="product-card__name">${data.name}</h3>
       <p class="product-card__desc">${data.desc}</p>
-      <div class="product-card__prices">
-        <span class="price--original">${data.orig}</span>
-        <span class="price--sale">${data.sale}</span>
-      </div>
       <div class="product-card__rating">${data.rating}</div>
       <a href="#contact" class="btn btn--primary btn--full" onclick="closeModal()">Inquire About This Watch</a>
     </div>
@@ -212,7 +208,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // active link style
-(function() {
+(function () {
   const s = document.createElement('style');
   s.textContent = '.active-link { color: var(--gold-light) !important; } .active-link::after { width: 100% !important; }';
   document.head.appendChild(s);

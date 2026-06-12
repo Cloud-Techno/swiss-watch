@@ -89,8 +89,7 @@ a {
 }
 
 .navbar.scrolled {
-  background: rgba(19, 34, 50, 0.97);
-  /* #132232 */
+  background: #132232 !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
@@ -1421,6 +1420,14 @@ a {
   color: rgba(255, 255, 255, .38);
 }
 
+/* Global Hiding as per user request (Prices & Ratings) */
+.product-card__prices,
+.souvenir-price,
+.modal__info .product-card__prices,
+.product-card__rating {
+  display: none !important;
+}
+
 /* ============ MODAL ============ */
 .modal-overlay {
   position: fixed;
@@ -1601,8 +1608,9 @@ a {
     /* #132232 */
     backdrop-filter: blur(16px);
     align-items: center;
-    justify-content: center;
-    gap: 32px;
+    justify-content: flex-start;
+    padding-top: 100px;
+    gap: 28px;
     z-index: 999;
   }
 
@@ -1625,6 +1633,16 @@ a {
 
   .navbar__hamburger.active span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding-top: 120px;
+    min-height: 580px;
+  }
+
+  .hero__content {
+    padding-top: 0;
   }
 
   .hero__title {
