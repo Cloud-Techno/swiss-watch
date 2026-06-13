@@ -84,15 +84,30 @@ a {
   right: 0;
   z-index: 1000;
   background: transparent;
-  transition: var(--transition);
-  padding: 0;
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s ease;
+  padding: 10px 0;
+}
+
+.navbar.scrolled::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 34, 50, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: -1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled {
+  background: transparent;
+  padding: 0;
+}
+
+.navbar.navbar--open {
   background: #132232 !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
 }
 
 .navbar__inner {
@@ -119,8 +134,13 @@ a {
 }
 
 .logo-icon {
-  font-size: 1.5rem;
-  filter: drop-shadow(0 0 8px rgba(201, 168, 76, .5));
+  font-size: 1.65rem;
+  filter: drop-shadow(0 0 10px rgba(201, 168, 76, .6));
+  transition: transform 0.3s ease;
+}
+
+.navbar:hover .logo-icon {
+  transform: rotate(5deg) scale(1.1);
 }
 
 .logo-text em {
@@ -152,14 +172,20 @@ a {
   height: 2px;
   background: var(--gold-light);
   border-radius: 2px;
-  transition: width 0.28s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar__links a:hover {
+.navbar__links a:hover,
+.navbar__links a.active-link {
   color: var(--white);
 }
 
-.navbar__links a:hover::after {
+.navbar__links a.active-link {
+  color: var(--gold-light) !important;
+}
+
+.navbar__links a:hover::after,
+.navbar__links a.active-link::after {
   width: 100%;
 }
 
@@ -832,14 +858,7 @@ a {
   font-size: .78rem;
 }
 
-.featured-watch {
-  grid-column: 2;
-  grid-row: 1 / 3;
-}
-
-.featured-watch .product-card__image-wrap {
-  aspect-ratio: 4 / 5;
-}
+/* Spanning removed for uniform card size */
 
 .watches-cta-row {
   display: flex;
@@ -929,13 +948,7 @@ a {
   border-color: var(--grey-200);
 }
 
-.souvenir-card--featured {
-  grid-column: span 2;
-}
-
-.souvenir-card--featured .souvenir-card__image {
-  height: 320px;
-}
+/* Spanning removed for uniform card size */
 
 .souvenir-card__image {
   height: 220px;
@@ -1604,14 +1617,27 @@ a {
     flex-direction: column;
     position: fixed;
     inset: 0;
-    background: rgba(19, 34, 50, 0.98);
-    /* #132232 */
-    backdrop-filter: blur(16px);
+    background: #132232;
+    /* Solid background for mobile menu */
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 100px;
-    gap: 28px;
+    justify-content: center;
+    /* Centered for more professional feel */
+    padding-top: 0;
+    gap: 32px;
     z-index: 999;
+    animation: slideInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .navbar__links.open a {

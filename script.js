@@ -2,42 +2,48 @@
 //  ZÜRICH TIME & GIFTS — Main JavaScript
 // ============================================================
 
-// ---------- NAVBAR SCROLL ----------
+// ---------- NAVBAR SCROLL & STATE ----------
 const navbar = document.getElementById('navbar');
-function handleScroll() {
-  const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollPos > 10) {
-    if (navbar) {
-      navbar.classList.add('scrolled');
-      navbar.style.setProperty('background', '#132232', 'important');
-    }
-  } else {
-    if (navbar) {
-      navbar.classList.remove('scrolled');
-      navbar.style.setProperty('background', 'transparent', 'important');
-    }
-  }
-}
-window.addEventListener('scroll', handleScroll, { passive: true });
-handleScroll(); // Check on load
-
-// ---------- HAMBURGER MENU ----------
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
+function updateNavbar() {
+  const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+  const isMenuOpen = navLinks.classList.contains('open');
+
+  if (scrollPos > 20 || isMenuOpen) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+}
+
+// ---------- HAMBURGER MENU ----------
 hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
   hamburger.classList.toggle('active');
-  navLinks.classList.toggle('open');
-  document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  navbar.classList.toggle('navbar--open', isOpen);
+
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+  updateNavbar();
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navLinks.classList.remove('open');
+    navbar.classList.remove('navbar--open');
     document.body.style.overflow = '';
+    updateNavbar();
   });
 });
+
+window.addEventListener('scroll', updateNavbar, { passive: true });
+updateNavbar(); // Initial check
 
 // ---------- SMOOTH SCROLL FOR HERO ARROW ----------
 const scrollDown = document.getElementById('scrollDown');
@@ -207,9 +213,3 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
-// active link style
-(function () {
-  const s = document.createElement('style');
-  s.textContent = '.active-link { color: var(--gold-light) !important; } .active-link::after { width: 100% !important; }';
-  document.head.appendChild(s);
-})();
