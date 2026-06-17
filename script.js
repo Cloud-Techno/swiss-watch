@@ -64,39 +64,7 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ---------- SCROLL REVEAL ----------
-function createObserver() {
-  const observerOptions = {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.product-card, .souvenir-card, .usp-card, .testimonial-card, .store-info__block, .contact-card')
-    .forEach((el, i) => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(28px)';
-      el.style.transition = `opacity 0.55s ease ${i * 0.07}s, transform 0.55s ease ${i * 0.07}s`;
-      observer.observe(el);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', createObserver);
-
-// Add revealed class style
-(function () {
-  const style = document.createElement('style');
-  style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
-  document.head.appendChild(style);
-})();
 
 // ---------- CONTACT FORM ----------
 function handleForm(e) {

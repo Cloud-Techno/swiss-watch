@@ -32,7 +32,7 @@
         <a href="souvenirs.html">Souvenirs</a>
         <a href="#about">About</a>
         <a href="#store">Our Store</a>
-        <a href="#contact" class="btn btn--nav">Visit Us</a>
+        <a href="#store" class="btn btn--nav">Visit Us</a>
       </nav>
       <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -146,7 +146,7 @@
         <div class="product-card product-card--watch" data-category="dress">
           <div class="product-card__badge badge--sale">OUTLET SPECIAL</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-roamer.png" alt="Roamer Swiss Watch" loading="lazy" />
+            <img src="images/watch-roamer.png" alt="Roamer Swiss Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch1')">Quick View</button>
             </div>
@@ -164,7 +164,7 @@
         <div class="product-card product-card--watch featured-watch" data-category="sport">
           <div class="product-card__badge badge--hot">BEST SELLER</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-victorinox.png" alt="Victorinox Swiss Sport Watch" loading="lazy" />
+            <img src="images/watch-victorinox.png" alt="Victorinox Swiss Sport Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch2')">Quick View</button>
             </div>
@@ -182,7 +182,7 @@
         <div class="product-card product-card--watch" data-category="luxury">
           <div class="product-card__badge badge--new">ELEGANCE</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-jacques.png" alt="Jacques du Manoir Luxury Watch" loading="lazy" />
+            <img src="images/watch-jacques.png" alt="Jacques du Manoir Luxury Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch3')">Quick View</button>
             </div>
@@ -200,7 +200,7 @@
         <div class="product-card product-card--watch" data-category="sport">
           <div class="product-card__badge badge--sale">OUTLET SPECIAL</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-wenger.png" alt="Wenger Swiss Watch" loading="lazy" />
+            <img src="images/watch-wenger.png" alt="Wenger Swiss Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch4')">Quick View</button>
             </div>
@@ -218,7 +218,7 @@
         <div class="product-card product-card--watch" data-category="dress">
           <div class="product-card__badge badge--new">ICONIC DESIGN</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-mondaine.png" alt="Mondaine Swiss Watch" loading="lazy" />
+            <img src="images/watch-mondaine.png" alt="Mondaine Swiss Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch5')">Quick View</button>
             </div>
@@ -237,7 +237,7 @@
         <div class="product-card product-card--watch" data-category="luxury">
           <div class="product-card__badge badge--sale">DIAMOND GLASS</div>
           <div class="product-card__image-wrap">
-            <img src="images/watch-jowissa.png" alt="Jowissa Luxury Watch" loading="lazy" />
+            <img src="images/watch-jowissa.png" alt="Jowissa Luxury Watch" />
             <div class="product-card__hover-actions">
               <button class="action-btn" aria-label="Quick view" onclick="openModal('watch6')">Quick View</button>
             </div>
@@ -290,8 +290,8 @@
   <section class="section about-section" id="about">
     <div class="container about-inner">
       <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=720&q=80" alt="Zürich old town street"
-          loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=720&q=80"
+          alt="Zürich old town street" />
         <div class="about-image__badge">
           <span class="big-num">15+</span>
           <span>Years in Zürich</span>
@@ -321,6 +321,90 @@
             <span class="stat__label">Happy Customers</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOUVENIRS SECTION ============ -->
+  <section class="section souvenirs-section" id="souvenirs-preview">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Take Switzerland Home</span>
+        <h2 class="section__title">Zürich Souvenirs & Gifts</h2>
+        <p class="section__sub">Complement your Swiss watch with authentic Zürich souvenirs — from premium
+          luggage to
+          hand-crafted magnets, chocolates, and more.</p>
+      </div>
+
+      <div class="souvenir-grid">
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="/images/swiza.webp" alt="Swiza Swiss Pocket Knife" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiza Pocket Knives</h3>
+            <p>The modern Swiss army knife. Ergonomic, elegant, and engineered for precision with
+              high-carbon steel blades.</p>
+          </div>
+        </div>
+
+        <div class="souvenir-card souvenir-card--featured">
+          <div class="souvenir-card__image">
+            <img src="images/luggage.png" alt="Swiss design luggage" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiss Traveller Luggage</h3>
+            <p>Premium hardshell suitcases in Switzerland's signature red. Highly durable, 360° wheels, and
+              TSA locks.</p>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="/images/tshirt.png" alt="Zürich Souvenir T-shirt" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Apparel Collection</h3>
+            <p>Premium cotton T-shirts featuring modern minimalist designs of Zürich and the Swiss Alps.</p>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="/images/cap.webp" alt="Swiss Cross Cap" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Swiss Cross Headwear</h3>
+            <p>Iconic Swiss cross caps and hats. The perfect accessory for your Zürich adventure.</p>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="images/souvenir-magnets.png" alt="Zürich Magnets" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Authentic Zürich Magnets</h3>
+            <p>Hand-crafted 3D magnets of Grossmünster, Bahnhofstrasse, and traditional Swiss motifs.</p>
+          </div>
+        </div>
+
+        <div class="souvenir-card">
+          <div class="souvenir-card__image">
+            <img src="/images/canta.jpg" alt="Premium Swiss Travel Bag" />
+          </div>
+          <div class="souvenir-card__body">
+            <h3>Travel Bags</h3>
+            <p>Robust and stylish bags designed for your travels or as a useful Swiss souvenir.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px; display: flex; justify-content: center;">
+        <a href="souvenirs.html" class="btn btn--primary" style="padding: 14px 40px;">Explore Full Souvenir
+          Collection</a>
       </div>
     </div>
   </section>
@@ -367,9 +451,11 @@
           </div>
         </div>
         <div class="store-map">
+
           <iframe title="Zürich Outlet Store Location"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=8.527%2C47.372%2C8.548%2C47.381&layer=mapnik&marker=47.3769%2C8.5417"
-            width="100%" height="400" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.2519442508174!2d8.542435511875798!3d47.36800097104867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa0ab117f5bb5%3A0x896a40899adde6f4!2sLimmatquai%204%2C%208001%20Z%C3%BCrich!5e0!3m2!1sen!2sch!4v1781675299813!5m2!1sen!2sch"
+            width="100%" height="450" style="border:0; border-radius:12px;" allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -417,9 +503,8 @@
         <div class="contact-aside">
           <div class="contact-card">
             <div class="contact-card__icon">💬</div>
-            <h4>WhatsApp</h4>
             <p>Message us directly for fast replies on watch availability.</p>
-            <a href="https://wa.me/41440000000" class="btn btn--whatsapp" target="_blank" rel="noopener">Open
+            <a href="https://wa.me/41765755655" class="btn btn--whatsapp" target="_blank" rel="noopener">
               WhatsApp</a>
           </div>
           <div class="contact-card">
