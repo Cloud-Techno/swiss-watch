@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Thank you for contacting Zürich Watches & Souvenirs. We will get back to you shortly." />
+    <title>Thank You — Zürich Watches & Souvenirs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .thanks-section {
+            padding: 160px 0 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            text-align: center;
+            background: var(--cream);
+        }
+
+        .thanks-card {
+            background: var(--white);
+            padding: 60px 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            width: 100%;
+            border-top: 5px solid var(--red);
+        }
+
+        .thanks-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            animation: heartBeat 1.2s infinite alternate;
+        }
+
+        .thanks-title {
+            font-family: var(--font-display);
+            color: var(--navy);
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .thanks-message {
+            color: var(--grey-500);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.08);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar scrolled" id="navbar" style="background: var(--navy);">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">
+                <img src="images/Logo.svg" alt="Zürich Watches Logo" class="logo-img" />
+            </a>
+            <nav class="navbar__links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index.html#watches">Watches</a>
+                <a href="souvenirs.html">Souvenirs</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#store">Our Store</a>
+                <a href="index.html#contact" class="btn btn--nav">Visit Us</a>
+            </nav>
+            <button class="navbar__hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============ THANKS CONTENT ============ -->
+    <section class="thanks-section">
+        <div class="container" style="display: flex; justify-content: center;">
+            <div class="thanks-card">
+                <div class="thanks-icon">✈️</div>
+                <h1 class="thanks-title">Message Sent!</h1>
+                <p class="thanks-message">
+                    Thank you for contacting Zürich Watches & Souvenirs. We have successfully received your inquiry and
+                    our team
+                    will get back to you shortly (typically within 24 hours).
+                </p>
+                <a href="index.html" class="btn btn--primary">Back to Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="navbar__logo">
+                    <img src="images/Logo.svg" alt="Zürich Watches Logo" class="logo-img" />
+                </a>
+                <p>Your premier destination for authentic Swiss watches at outlet prices and genuine Swiss souvenirs in
+                    the
+                    heart of Zürich.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Instagram">📸 Instagram</a>
+                    <a href="#" aria-label="Facebook">📘 Facebook</a>
+                    <a href="#" aria-label="TripAdvisor">⭐ TripAdvisor</a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h5>Quick Links</h5>
+                <a href="index.html#watches">Swiss Watches</a>
+                <a href="souvenirs.html">Souvenirs & Gifts</a>
+                <a href="index.html#about">Our Story</a>
+                <a href="index.html#store">Find Us</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer__links">
+                <h5>Categories</h5>
+                <a href="index.html#watches">Dress Watches</a>
+                <a href="index.html#watches">Sport Chronographs</a>
+                <a href="index.html#watches">Luxury Gold</a>
+                <a href="souvenirs.html">Travel Luggage</a>
+                <a href="souvenirs.html">Swiss Magnets</a>
+            </div>
+            <div class="footer__links">
+                <h5>Visit Us</h5>
+                <a href="index.html#store">Limmatquai 104, 8001 Zürich</a>
+                <a href="tel:+41765755655">+41 76 575 56 55</a>
+                <span>Mon–Fri 09:00–20:00</span>
+                <span>Saturday 09:00–19:00</span>
+                <span>Sunday 09:00–17:00</span>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <span>© 2024 Zürich Time & Gifts. All rights reserved.</span>
+                <span>🇨🇭 Swiss Authenticity Guaranteed</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

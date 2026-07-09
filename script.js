@@ -66,24 +66,46 @@ function scrollToTop() {
 
 
 
-// ---------- CONTACT FORM ----------
-function handleForm(e) {
+// ---------- CONTACT FORM SUBMISSION (Web3Forms AJAX) ----------
+async function handleForm(e) {
   e.preventDefault();
   const form = document.getElementById('contact-form');
-  const success = document.getElementById('form-success');
-  const btn = form.querySelector('button[type="submit"]');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+  const formData = new FormData(form);
+  // Add the access key provided by the user
+  formData.append("access_key", "94117aa2-2df9-4e38-ba06-3e5c146ae1ef");
 
-  // Simulate async submission
-  setTimeout(() => {
-    success.textContent = "✅ Thank you! We'll be in touch shortly.";
-    form.reset();
-    btn.textContent = 'Send Message ✈️';
-    btn.disabled = false;
-    setTimeout(() => { success.textContent = ''; }, 6000);
-  }, 1400);
+  // Dynamically set human-friendly subject line in emails
+  const name = formData.get("name") || "";
+  const subjectVal = formData.get("subject") || "General Inquiry";
+  formData.set("subject", `Inquiry from: ${name} (${subjectVal})`);
+
+  const originalText = submitBtn.textContent || submitBtn.innerText;
+  submitBtn.innerText = "Sending...";
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      // Redirect to thank you page
+      window.location.href = "thanks.html";
+    } else {
+      alert("Error: " + (data.message || "Failed to submit."));
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    submitBtn.innerText = originalText;
+    submitBtn.disabled = false;
+  }
 }
 
 // ---------- QUICK VIEW MODAL ----------
@@ -117,11 +139,11 @@ const watchData = {
     rating: '★★★★★ (67 reviews)'
   },
   watch5: {
-    img: 'images/watch-mondaine.png',
-    brand: 'Mondaine',
-    name: 'SBB Classic Design',
-    desc: 'An extraordinarily clean design from the official Swiss Railways (SBB). Features a brushed steel case, black leather strap, and the famous red second hand. A true icon of Swiss design heritage.',
-    rating: '★★★★★ (34 reviews)'
+    img: 'images/watch-1.png',
+    brand: 'Claude Bernard',
+    name: 'Classic Slimline Date',
+    desc: 'An elegant Swiss dress watch featuring a slim stainless-steel case (40mm), minimalist white dial with silver-tone hands, a practical date display at 6 o\'clock, and a premium brown alligator-pattern leather strap. Swiss quartz movement, sapphire crystal, and 30m water resistance.',
+    rating: '★★★★★ (42 reviews)'
   },
   watch6: {
     img: 'images/watch-jowissa.png',
